@@ -58,7 +58,6 @@ $(document).on('click', '.save-edit-btn', function () {
     var editedContactEmail = $('#editContactEmailAddress').val();
 
 
-    // For example, you can make an AJAX request to update the data in the database
 
     // Update contact fields in the modal before hiding
     $('#editModal').on('hidden.bs.modal', function () {
@@ -70,7 +69,6 @@ $(document).on('click', '.save-edit-btn', function () {
     // Hide the Bootstrap modal
     $('#editModal').modal('hide');
 });
-
 
 
 
