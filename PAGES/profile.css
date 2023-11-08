@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Roboto+Serif:opsz,wght@8..144,500&family=Roboto:wght@300;500&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    background-color: #FFFFFF;
+    font-size: 1.2rem;
+    margin-left: 100px;
+}
+
+.nav_logo {
+    padding: 10px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.menu_items {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+a {
+    color: #000000 !important;
+    text-decoration: none !important;
+    list-style: none !important;
+}
+#menu_toggle {
+    display: none;
+}
+
+
+
+
+
+/* content */
+.profile_container{
+    margin-top: 100px;
+}
+main{
+    display: flex;
+}
+.profile_container ul li{
+    text-decoration: none;
+    list-style: none;
+}
+.profile_avatar{
+    margin-left: 50px;
+font-size: 100px;
+border: 1px solid black;
+width: 150px;
+text-align: center;
+border-radius: 80px;
+}
+
+.personalContainer h2 , .CompanyContainer h2{
+    border: 1px solid black;
+    border-radius: 0px 80px 80px 0px;
+    width: 350px;
+    height:80px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.personalContainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.calendar2023{
+    margin-top: 200px;
+    margin-left: 100px;
+}
+table{
+    width: 500px !important;
+    height: 300px !important;
+}
+th{
+    background-color: #92E3A9;
+}
+.To-Do-List table{
+    margin-top: 240px !important;
+    margin-left: 50px;
+    border: 1px solid black;
+    height: 310px;
+}
+.To-Do-List th{
+    background-color: #92E3A9 !important;
+}
+/* footer */
+.footer{
+    padding-bottom: 50px;
+    margin-top: 100px;
+}
+.topFooter, .bottomFooter{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+}
+.topFooter{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.bottomFooter{
+    margin-right: 180px;
+    margin-left: 50px;
+}
+.bottomFooter ul li{
+    list-style: none;
+    text-decoration: none;
+    display: inline;
+    justify-content: space-evenly;
+    padding-right: 5px;
+}
+.bottomFooter a{
+    color: black !important;
+}
+
+/* responsiveness */
+@media screen and (max-width: 900px) {
+    #menu_toggle {
+        display: block;
+        left: 80vw;
+
+    }
+
+    .nav {
+        padding: 0 20px;
+        background-color: #fff;
+    }
+
+    .menu_items {
+        position: fixed;
+        top: 0;
+        width: 260px;
+        background-color: #fff;
+        height: 100%;
+        left: -100%;
+        padding: 50px 30px 30px;
+        flex-direction: column;
+        transition: all 0.5s ease;
+    }
+
+    .showMenu .menu_items {
+        left: 0;
+    }
+
+    a {
+        color: #333;
+    }
+
+    #menu_toggle {
+        position: absolute;
+        top: 20px;
+        right: 60vw;
+    }
+
+    .menu_items #menu_toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    main{
+        display: grid;
+        margin: 0;
+    } 
+    .calendar2023{
+       display: none;
+    }
+    .To-Do-List table{
+    display: contents;
+    position: relative;
+    height: 310px;
+    margin-top: 30px;
+    max-width: 500px;
+    }
+    .bottomFooter ul li{
+        padding-right: 5px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .row {
+        text-align: center;
+    }
+    .column p{
+        text-align: center;
+    }
+
+    #menu_toggle {
+        position: absolute;
+        top: 20px;
+        left: 80vw;
+    }
+
+    .topFooter{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottomFooter{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+    main{
+        display: grid;
+        margin: 0;
+    } 
+    .calendar2023{
+       display: none;
+    }
+    .To-Do-List table{
+    display: contents;
+    position: relative;
+    height: 310px;
+    margin-top: 30px;
+    }
+    .bottomFooter ul li{
+        padding-right: 5px;
+    }
+
+}

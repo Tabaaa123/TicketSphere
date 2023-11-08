@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Roboto+Serif:opsz,wght@8..144,500&family=Roboto:wght@300;500&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 60px;
+    background-color: #FFFFFF;
+    font-size: 1.2rem;
+    margin-left: 100px;
+}
+
+.nav_logo {
+    padding: 10px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.menu_items {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #000000;
+    text-decoration: none;
+}
+#MenuToggle {
+    display: none;
+}
+
+/* content */
+h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.FormContainer {
+    margin-bottom: 100px;
+    align-items: center;
+}
+form{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#submit {
+    align-items: center;
+    justify-content: center;
+    width: 100px !important;
+    border: 2px solid black !important;
+}
+
+.firstForm, .secondForm{
+    border: 2px solid black;
+    border-radius: 5px;
+    display: grid;
+    padding: 20px;
+}
+.secondForm{
+    width: 500px;
+}
+.firstForm{
+    width: 500px;
+}
+input{
+    height: 30px;
+}
+/* footer */
+.footer{
+    padding-bottom: 50px;
+}
+.topFooter, .bottomFooter{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+}
+.topFooter{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.bottomFooter{
+    margin-right: 180px;
+    margin-left: 50px;
+}
+.bottomFooter ul li{
+    list-style: none;
+    text-decoration: none;
+    display: inline;
+    justify-content: space-evenly;
+    padding-right: 5px;
+}
+.bottomFooter a{
+    color: black !important;
+}
+/* responsiveness */
+@media screen and (max-width: 900px) {
+    #MenuToggle {
+        display: block;
+        left: 80vw;
+
+    }
+
+    .nav {
+        padding: 0 20px;
+        background-color: #fff;
+    }
+
+    .menu_items {
+        position: fixed;
+        top: 0;
+        width: 260px;
+        background-color: #fff;
+        height: 100%;
+        left: -100%;
+        padding: 50px 30px 30px;
+        flex-direction: column;
+        transition: all 0.5s ease;
+    }
+
+    .showMenu .menu_items {
+        left: 0;
+    }
+
+    a {
+        color: #333;
+    }
+
+    #MenuToggle {
+        position: absolute;
+        top: 20px;
+        right: 60vw;
+    }
+
+    .menu_items #MenuToggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    form{
+        display: contents;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+    .firstForm, .secondForm{
+        margin-bottom: 30px;
+        width: 500px;
+    }
+    .bottomFooter ul li{
+        padding-right: 5px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .row {
+        text-align: center;
+    }
+    .column p{
+        text-align: center;
+    }
+
+    #MenuToggle {
+        position: absolute;
+        top: 20px;
+        left: 80vw;
+    }
+
+    .topFooter{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottomFooter{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+    form{
+        display: contents;
+        position: relative;
+        align-items: center;
+    }
+    .firstForm, .secondForm{
+        margin-bottom: 30px;
+        width: 400px;
+    }
+    .bottomFooter ul li{
+        padding-right: 5px;
+    }
+}
